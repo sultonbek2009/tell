@@ -1,4 +1,3 @@
-import React from "react";
 import kidsBack from "../../assets/kidsBack.avif";
 import kidsBack2 from "../../assets/kidsBack2.avif";
 
@@ -12,10 +11,10 @@ const KidsStyle = () => {
       }}
     >
       {/* Yozuvlar blok */}
-      <div className=" z-10">
+      <div className=" z-10 ">
         <h1
-          className="text-5xl md:text-7xl font-medium mb-20 leading-tight 
-             px-4 md:px-20 text-left"
+          className="text-7xl md:text-7xl  font-medium mb-20 leading-tight 
+             px-4 md:px-20  mr-30"
         >
           20% Off <br /> Kids Styles
         </h1>

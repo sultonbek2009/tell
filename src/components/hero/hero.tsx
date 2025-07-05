@@ -2,7 +2,7 @@
 function Hero() {
   return (
     <div className='w-full flex'>
-      hero
+      <h1></h1>
     </div>
   )
 }
