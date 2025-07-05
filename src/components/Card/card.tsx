@@ -1,4 +1,6 @@
 import React from "react";
+import { Card } from "../ui/card";
+
 
 interface Product {
   label?: "BEST SELLER" | "SALE";
@@ -8,11 +10,11 @@ interface Product {
   oldPrice?: number;
 }
 
-interface CardListProps {
+interface CardList {
   products: Product[];
 }
 
-const CardList: React.FC<CardListProps> = ({ products }) => {
+const CardList: React.FC<CardList> = ({ products }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       {products.map((product, index) => (
@@ -29,17 +31,17 @@ const CardList: React.FC<CardListProps> = ({ products }) => {
               </span>
             )}
           </div>
-          <CardContent className="mt-4">
+          <Card className="mt-4">
             <h3 className="text-sm font-semibold">{product.name}</h3>
-          </CardContent>
-          <CardFooter className="flex items-center space-x-2">
+          </Card>
+          <Card className="flex items-center space-x-2">
             <span className="text-base font-bold">${product.price.toFixed(2)}</span>
             {product.oldPrice && (
               <span className="text-sm line-through text-gray-500">
                 ${product.oldPrice.toFixed(2)}
               </span>
             )}
-          </CardFooter>
+          </Card>
         </Card>
       ))}
     </div>

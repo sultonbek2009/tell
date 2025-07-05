@@ -1,5 +1,4 @@
-import React from "react";
-import CardList from "@/components/CardList";
+import CardList from "../Card/card";
 
 const products = [
   {

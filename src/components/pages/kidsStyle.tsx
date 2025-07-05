@@ -11,7 +11,6 @@ const KidsStyle = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* Yozuvlar blok */}
       <div className=" z-10">
         <h1
           className="text-5xl md:text-7xl font-medium mb-20 leading-tight 
@@ -34,7 +33,6 @@ const KidsStyle = () => {
         </div>
       </div>
 
-      {/* O‘ng yuqori burchakda rasm + matn */}
       <div className="absolute top-10 right-10 flex items-center gap-4 bg-white/70 backdrop-blur-sm p-4 rounded-lg">
         <img
           src={kidsBack2}
