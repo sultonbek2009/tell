@@ -5,7 +5,7 @@ import kidsBack2 from "../../assets/kidsBack2.avif";
 const KidsStyle = () => {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center flex px-6"
+      className="relative w-full h-screen bg-cover bg-center flex px-6 "
       style={{
         backgroundImage: `url(${kidsBack})`,
         backgroundAttachment: "fixed",
