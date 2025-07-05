@@ -7,7 +7,7 @@ function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <div className="bg-background w-full h-20 flex justify-between items-center px-4 border-b z-50">
+    <div className="bg-background w-full h-20 flex justify-between items-center px-4 z-50">
       <h1 className="text-xl font-bold">Pyst.</h1>
 
       <div className="flex items-center gap-4">

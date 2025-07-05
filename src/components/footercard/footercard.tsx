@@ -2,8 +2,8 @@
 
 function FooterCard() {
   return (
-    <div>
-             <h1 className=' ml-[30px] text-[20px] font-light'>SHOP BY COLLECTION</h1>
+    <div className="py-40">
+             <h1 className=' ml-[30px] text-[20px] font-extralight'>SHOP BY COLLECTION</h1>
         <div className="flex justify-around gap-3 w-[1900px] mt-[30px] ">
             <div className="ml-[20px]">
                 <img 
