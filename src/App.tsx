@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/shared/navbar";
+// import Navbar from "./components/shared/navbar";
 import KidsStyle from "./components/pages/kidsStyle";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<KidsStyle />} />
       </Routes>
