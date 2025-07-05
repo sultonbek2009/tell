@@ -1,16 +1,16 @@
-import { Route, Routes } from "react-router-dom"
-import Home from "./components/home/home"
-import Navbar from "./components/shared/navbar"
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/shared/navbar";
+import KidsStyle from "./components/pages/kidsStyle";
 
 function App() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<KidsStyle />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

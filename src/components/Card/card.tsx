@@ -1,39 +1,49 @@
+import React from "react";
 
-export default function Card() {
-  const products = [
-    {
-      label: "BEST SELLER",
-      image: "https://static.wixstatic.com/media/c837a6_368addd3225e4019b4ef4d4741d451ea~mv2.jpg/v1/fill/w_446,h_594,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_368addd3225e4019b4ef4d4741d451ea~mv2.jpg",
-      name: "SUSTAINABLE STRIDER",
-      price: 150,
-    },
-    {
-      label: "SALE",
-      image: "https://static.wixstatic.com/media/c837a6_a679b52993ee4a8f852c812ea7deb9d9~mv2.jpg/v1/fill/w_446,h_594,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_a679b52993ee4a8f852c812ea7deb9d9~mv2.jpg",
-      name: "DISTANCE ELITE",
-      price: 140,
-      oldPrice: 160,
-    },
-    {
-      label: "BEST SELLER",
-      image: "https://static.wixstatic.com/media/c837a6_a2c4dfe107b54c778c2826b01e24c855~mv2.jpg/v1/fill/w_446,h_594,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_a2c4dfe107b54c778c2826b01e24c855~mv2.jpg",
-      name: "SPRINT CHAMP",
-      price: 180,
-    },
-    {
-      label: "SALE",
-      image: "https://static.wixstatic.com/media/c837a6_22011337f6aa46b2866ec703742ac4ca~mv2.jpg/v1/fill/w_446,h_594,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_22011337f6aa46b2866ec703742ac4ca~mv2.jpg",
-      name: "JUNIOR SPORT",
-      price: 72,
-      oldPrice: 90,
-    },
-  ];
+interface Product {
+  label?: "BEST SELLER" | "SALE";
+  image: string;
+  name: string;
+  price: number;
+  oldPrice?: number;
+}
 
+interface CardListProps {
+  products: Product[];
+}
+
+const CardList: React.FC<CardListProps> = ({ products }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       {products.map((product, index) => (
-        <Card key={index} {...product} />
+        <Card key={index} className="overflow-hidden rounded-lg">
+          <div className="relative w-full h-64">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="object-cover w-full h-full rounded-t-lg"
+            />
+            {product.label && (
+              <span className="absolute top-2 left-2 bg-gray-200 text-gray-800 text-xs font-semibold px-2 py-1 rounded">
+                {product.label}
+              </span>
+            )}
+          </div>
+          <CardContent className="mt-4">
+            <h3 className="text-sm font-semibold">{product.name}</h3>
+          </CardContent>
+          <CardFooter className="flex items-center space-x-2">
+            <span className="text-base font-bold">${product.price.toFixed(2)}</span>
+            {product.oldPrice && (
+              <span className="text-sm line-through text-gray-500">
+                ${product.oldPrice.toFixed(2)}
+              </span>
+            )}
+          </CardFooter>
+        </Card>
       ))}
     </div>
   );
-}
+};
+
+export default CardList;
