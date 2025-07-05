@@ -7,7 +7,9 @@ function App() {
   return (
     <div>
        <Navbar /> 
-       <Hero/>
+      <div className="py-10">
+         <Hero/>
+      </div>
       <Routes>
         <Route path="/" element={<KidsStyle />} />
       </Routes>
