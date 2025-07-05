@@ -1,8 +1,7 @@
 
 function Hero() {
   return (
-    <div>
-      
+    <div className='w-full flex'>
     </div>
   )
 }
