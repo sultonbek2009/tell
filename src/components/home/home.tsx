@@ -1,11 +1,11 @@
-import Card from "../Card/card"
+import Card from "../../components/Card/card";
 
 function Home() {
   return (
     <div>
-      <Card/>
+      <Card />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

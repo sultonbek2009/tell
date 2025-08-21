@@ -1,6 +1,7 @@
-
 export const navLink = [
-    {name:'Home',path:'/'},
-    {name:'Shop',path:'/shop'},
-    {name:'About',path:'/about'},
-]
+  { name: "Models", path: "/models" },
+  { name: "Buy Online", path: "/buy" },
+  { name: "Finance", path: "/finance" },
+  { name: "Owners", path: "/owners" },
+  { name: "Discover", path: "/discover" },
+];
